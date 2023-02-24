@@ -62,8 +62,23 @@ function game() {
         console.log(playerScore);
         console.log(computerScore);
     }
+    
+    // declare overall winner 
+
+    function declareWinner() {
+        if (playerScore > computerScore) {
+        console.log("Game over. You win!")
+        }
+        else if (playerScore === computerScore) {
+            console.log("Game over. It's a tie!")
+        }
+        else {
+            console.log("Game over. You lose.")
+        }
+    }
+    
+    declareWinner();
 }
 
 game();
-
 

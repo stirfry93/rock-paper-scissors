@@ -8,6 +8,24 @@ rock.addEventListener('click', () => {
     console.log(playRound(playerSelection, computerSelection));
 });
 
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+    let playerSelection = "paper";
+    let computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+    console.log(computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+});
+
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => {
+    let playerSelection = "scissors";
+    let computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+    console.log(computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+});
+
 // function to randomly return either ‘Rock’, ‘Paper’ or ‘Scissors'
 
 function getComputerChoice() {

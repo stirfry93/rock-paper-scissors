@@ -49,19 +49,7 @@ function game() {
         }
     }
     
-    // play 5 rounds of game
-    for (i = 0; i < 5; i++) {
-        let playerSelection = prompt("Make a selection: rock, paper, or scissors.").toLowerCase();
-
-        const computerSelection = getComputerChoice();
-
-        console.log(playRound(playerSelection, computerSelection));
-
-        console.log(computerSelection);
     
-        console.log(playerScore);
-        console.log(computerScore);
-    }
     
     // declare overall winner 
 

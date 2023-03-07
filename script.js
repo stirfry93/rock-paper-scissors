@@ -1,13 +1,21 @@
-function game() {
-    // function to randomly return either ‘Rock’, ‘Paper’ or ‘Scissors'
 
-    function getComputerChoice() {
-        const choices = ['rock', 'paper', 'scissors']
-        return choices[Math.floor(Math.random() * choices.length)];
-    }
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+    let playerSelection = "rock";
+    let computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+    console.log(computerSelection);
+    console.log(playRound(playerSelection, computerSelection));
+});
 
-    
-    // function to play a single round of rock, paper, scissors
+// function to randomly return either ‘Rock’, ‘Paper’ or ‘Scissors'
+
+function getComputerChoice() {
+    const choices = ['rock', 'paper', 'scissors']
+    return choices[Math.floor(Math.random() * choices.length)];
+}
+  
+  // function to play a single round of rock, paper, scissors
 
     let playerScore = 0;
     let computerScore = 0;
@@ -53,19 +61,23 @@ function game() {
     
     // declare overall winner 
 
-    function declareWinner() {
-        if (playerScore > computerScore) {
-        console.log("Game over. You win!")
-        }
-        else if (playerScore === computerScore) {
-            console.log("Game over. It's a tie!")
-        }
-        else {
-            console.log("Game over. You lose.")
-        }
-    }
+    // function declareWinner() {
+       // if (playerScore > computerScore) {
+       // console.log("Game over. You win!")
+       // }
+       // else if (playerScore === computerScore) {
+       //     console.log("Game over. It's a tie!")
+       // }
+       // else {
+       //     console.log("Game over. You lose.")
+       // }
+   // }
     
-    declareWinner();
-}
 
-game();
+
+
+
+
+
+
+

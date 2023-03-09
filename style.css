@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(208, 182, 220);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+p {
+    margin: 25px;
+}
+
+button {
+    margin: 25px;
+    font-size: 50px;
+    background-color: rgb(156, 137, 165);
+}
+
+#results {
+    margin: 25px;
+    font-size: 20px;
+}
+
+#game {
+    border-style: solid; 
+    border-color: black;
+}
+
+#scores {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+}

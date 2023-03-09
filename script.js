@@ -1,4 +1,3 @@
-
 const rock = document.querySelector('#rock');
 rock.addEventListener('click', () => {
     let playerSelection = "rock";
@@ -20,74 +19,66 @@ scissors.addEventListener('click', () => {
     playRound(playerSelection, computerSelection);
 });
 
-// when button is clicked and playRound is run, change the DOM through the div to say the return strings from playRound 
-
-const results = document.querySelector('#results');
-
-
-
 // function to randomly return either ‘Rock’, ‘Paper’ or ‘Scissors'
 
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors']
     return choices[Math.floor(Math.random() * choices.length)];
 }
+
+// change the DOM to say the results from playRound 
+
+const results = document.querySelector('#results');
+
+// change the DOM to say the running scores
+
+
+const runningCompScore = document.querySelector('#runningCompScore');
+const runningPlayerScore = document.querySelector('#runningPlayerScore');
+
+let computerScore = 0;
+let playerScore = 0;
   
 // function to play a single round of rock, paper, scissors
 
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === 'rock' && computerSelection === 'rock') {
-        results.textContent = "Computer selected 'rock.' It's a tie! You both chose rock.";
+        results.textContent = "You and the computer both chose 'rock.' It's a tie!";
     }
     else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        results.textContent = "Computer selected 'paper.' You lose, sadly. Paper beats rock.";
+        runningCompScore.textContent = "Computer: " + ++computerScore;
+        results.textContent = "You chose 'rock' and the computer chose 'paper.' You lose. Paper beats rock.";
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        results.textContent = "Computer selected 'scissors.' You win! Rock beats scissors.";
+        runningPlayerScore.textContent = "Player: " + ++playerScore;
+        results.textContent = "You chose 'rock' and the computer chose 'scissors.' You win! Rock beats scissors.";
     }
     else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        results.textContent = "Computer selected 'rock.' You win! Paper beats rock.";
+        runningPlayerScore.textContent = "Player: " + ++playerScore;
+        results.textContent = "You chose 'paper' and the computer chose 'rock.' You win! Paper beats rock.";
     }
     else if (playerSelection === 'paper' && computerSelection === 'paper') {
-        results.textContent = "Computer selected 'paper.' It's a tie! You both chose paper.";
+        results.textContent = "You and the computer both chose 'paper.' It's a tie!";
     }
     else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        results.textContent = "Computer selected 'scissors.' You lose, sadly. Scissors beats paper.";
+        runningCompScore.textContent = "Computer: " + ++computerScore;
+        results.textContent = "You chose 'paper' and the computer chose 'scissors.' You lose. Scissors beats paper.";
     }
     else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        results.textContent = "Computer selected 'rock.' You lose, sadly. Rock beats scissors";
+        runningCompScore.textContent = "Computer: " + ++computerScore;
+        results.textContent = "You chose 'scissors' and the computer chose 'rock.' You lose. Rock beats scissors.";
     }
     else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        results.textContent = "Computer selected 'paper.' You win! Scissors beats paper.";
+        runningPlayerScore.textContent = "Player: " + ++playerScore;
+        results.textContent = "You chose 'scissors' and the computer chose 'paper.' You win! Scissors beats paper.";
     }
     else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-        results.textContent = "Computer selected 'scissors.' It's a tie! You both chose scissors.";
+        results.textContent = "You and the computer both chose 'scissors.' It's a tie!";
     }
 }
-    
-    
-    
-    // declare overall winner 
 
-    // function declareWinner() {
-       // if (playerScore > computerScore) {
-       // console.log("Game over. You win!")
-       // }
-       // else if (playerScore === computerScore) {
-       //     console.log("Game over. It's a tie!")
-       // }
-       // else {
-       //     console.log("Game over. You lose.")
-       // }
-   // }
-
-
-   // removed playerScore++ and computerScore++ from playRound
-    
-
-
-
+// announce a winner of the game once one player reaches 5 points
 
 
 

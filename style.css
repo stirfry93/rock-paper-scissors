@@ -14,14 +14,14 @@ button {
     background-color: rgb(156, 137, 165);
 }
 
+#finalResult {
+    margin: 25px;
+    font-size: 75px;
+}
+
 #results {
     margin: 25px;
     font-size: 20px;
-}
-
-#game {
-    border-style: solid; 
-    border-color: black;
 }
 
 #scores {
